@@ -1,0 +1,92 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1,3;
+    overflow-x: hidden;
+    height: auto;
+    font-family: 'Nunito',sans-serif;
+
+}
+.header__navbar{
+    opacity: .8;
+
+}
+.pd-2{
+    padding: 20px;
+}
+
+.icon-search{
+    color: black;
+}
+.font--Bold{
+    font-weight: 700;
+}
+.font--Light{
+    font-weight: 500;
+}
+.login-form{
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    position:relative;
+    padding: 10px;
+}
+.login-form::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: #000;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 5px;
+}
+.login-form:hover{
+    color:black;
+}
+.video__banner{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: -50;
+}
+.video-container video{
+    position: absolute;
+    top: -117px; left: 0;
+    z-index: -99;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    filter: brightness(1.1) grayscale(0.2) hue-rotate(52deg) opacity(0.35) contrast(0.8) url('#cherry-icecream');
+}
+.btn{
+    background-color: #4CAF50;
+    border-radius: 20px;
+    color: white;
+    padding: 12px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.video__banner .content h3{
+    font-size: 4.5rem;
+    color:#000;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+  
+.video__banner .content p{
+    font-size: 2.5rem;
+    color:#000;
+    padding:.5rem 0;
+}
