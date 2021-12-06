@@ -1,41 +1,82 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-weight: 500;
+}
 html{
     font-size: 100%;
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-    padding: 0;
-    line-height: 1,3;
     overflow-x: hidden;
-    height: auto;
-    font-family: 'Nunito',sans-serif;
-
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
 }
-.header__navbar{
-    opacity: .8;
-
-}
-.pd-2{
-    padding: 20px;
+section{
+    padding:2rem 9%;
 }
 
-.icon-search{
-    color: black;
-}
 .font--Bold{
     font-weight: 700;
 }
 .font--Light{
     font-weight: 500;
 }
+.fa-search{
+    font-size: 1.4em !important;
+}
+.btn{
+    background-color: transparent;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 20px;
+    color: white;
+    padding: 12px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn-login{
+    background-color: #192675;
+}
+.btn:hover{
+    background-color: #fff;
+    color:rgb(40, 26, 161);
+}
+.pd-2{
+    padding: 20px;
+}
+/* Header section*/
+.header__navbar{
+    /* opacity: .8; */
+    z-index: 1;
+    height: 7vh;
+    background-color: transparent!important;
+}
+.navbar-brand{
+    margin-top: 23px;
+}
+.navbar-collapse{
+    margin: 22px 0 0 30px;
+}
 .login-form{
-    color: black;
+    color: #fff;
     text-decoration: none;
     margin-right: 10px;
     position:relative;
     padding: 10px;
+    cursor: pointer;
 }
-.login-form::after{
+
+.login-form a{
+    color:#fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.login-form:first-child:after{
     content: "";
     display: block;
     position: absolute;
@@ -50,43 +91,189 @@ body{
 .login-form:hover{
     color:black;
 }
+/* End header section */
+/* Section video */
 .video__banner{
-    min-height: 80vh;
+    top: -100px;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     position: relative;
-    z-index: -50;
+    z-index: 0;
+    background: linear-gradient(to right,rgb(105, 113, 244),rgb(177, 22, 90));
 }
 .video-container video{
     position: absolute;
-    top: -117px; left: 0;
+    top: 0px; left: 0;
     z-index: -99;
     height: 100%;
     width:100%;
     object-fit: cover;
-    filter: brightness(1.1) grayscale(0.2) hue-rotate(52deg) opacity(0.35) contrast(0.8) url('#cherry-icecream');
+    opacity: 0.35;
+    /* filter: brightness(1.1) grayscale(0.2) hue-rotate(52deg) opacity(0.35) contrast(0.3 url('#cherry-icecream'); */
 }
-.btn{
-    background-color: #4CAF50;
-    border-radius: 20px;
-    color: white;
-    padding: 12px 36px;
+.video__banner .content{
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
 }
 .video__banner .content h3{
-    font-size: 4.5rem;
-    color:#000;
-    text-transform: uppercase;
+    font-size: 3rem;
+    color:#fff;
     text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+
 }
-  
 .video__banner .content p{
-    font-size: 2.5rem;
-    color:#000;
+    font-size: 1.1rem;
+    color:#fff;
     padding:.5rem 0;
 }
+/* End section video */
+/* Login form container */
+
+.login-form-container{
+    position: fixed;
+    top:-120%; left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width:100%;
+    background:rgb(0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form-container.active{
+    top:0;
+  }
+  
+  .login-form-container form{
+    margin:2rem;
+    padding:1.5rem 2rem;
+    border-radius: .5rem;
+    background:#fff;
+    width: 45rem;
+}
+  
+.login-form-container form h3{
+    font-size: 2rem;
+    color:#000;
+    font-weight: 700;
+    text-align: center;
+    padding:1rem 0;
+}
+    
+.login-form-container form h2{
+    font-size: 1.3rem;
+    color:#000;
+    font-weight: 300;
+    text-align: center;
+    padding:1rem 0; 
+}
+.login-form-container form a{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    padding:1rem 0; 
+    color: red;
+}
+.login-form-container form h2 a{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    padding:1rem 0; 
+    text-decoration: none;
+    color:rgb(40, 26, 161);
+}
+
+  
+.login-form-container form .box{
+    width:100%;
+    padding:1rem;
+    font-size: 1.7rem;
+    color:#333;
+    margin:.6rem 0;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+  
+.login-form-container form .box:focus{
+    border-color: var(--orange);;
+}
+  
+.login-form-container form #remember{
+    margin:2rem 0;
+ 
+}
+  
+.login-form-container form label{
+    font-size: 1.5rem;
+}
+  
+.login-form-container form .btn{
+    display: block;
+    width:100%;
+}
+  
+.login-form-container form p{
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color:#666;
+}
+  
+.login-form-container form p a{
+    color:var(--orange);
+}
+  
+.login-form-container form p a:hover{
+    color:#333;
+    text-decoration: underline;
+}
+  
+.login-form-container #form-close{
+    position: absolute;
+    top:2rem; right:3rem;
+    font-size: 5rem;
+    color:#fff;
+    cursor: pointer;
+}
+/* End login form container */
+/* Course section */
+.course-item{
+    border-style: solid;
+    border-width: 1px;
+    width: 300px;
+}
+.course__section .content{
+    text-align: center;
+}
+.course__section .content h3{
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+.course__section .content p{
+    font-size: 15px;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+.course-item .detail-item p{
+    font-size: 15px;
+    color: #7e7e7e
+    
+}
+.course-item .detail-item a{
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    
+}
+.course-item .detail-item h3{
+    font-size: 1rem;
+}
+.img-item .img-course{
+    width: 170px;
+    object-fit: cover;
+    
+}
+/* End course section */
