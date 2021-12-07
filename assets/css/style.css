@@ -2,7 +2,6 @@
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
-    text-transform: capitalize;
     outline: none; border:none;
     text-decoration: none;
     transition: all .2s linear;
@@ -15,9 +14,17 @@ html{
     scroll-behavior: smooth;
 }
 section{
-    padding:2rem 9%;
+    padding:2rem 4%;
 }
 
+:root {
+    --main-background-color: #212121;
+    --main-background2-color: #000;
+    --main-color: #ffffff;
+    --gray-color: #7e7e7e ;
+    --footer-color: #151515;
+    --copyright-color: #0a0a0a;
+}
 .font--Bold{
     font-weight: 700;
 }
@@ -45,6 +52,7 @@ section{
 .btn:hover{
     background-color: #fff;
     color:rgb(40, 26, 161);
+    border-color: rgb(40, 26, 161);;
 }
 .pd-2{
     padding: 20px;
@@ -152,51 +160,54 @@ section{
     padding:1.5rem 2rem;
     border-radius: .5rem;
     background:#fff;
-    width: 45rem;
+    width: 31rem;
+    height: 27rem;
 }
   
 .login-form-container form h3{
-    font-size: 2rem;
+    font-size: 25px;
     color:#000;
     font-weight: 700;
     text-align: center;
-    padding:1rem 0;
+    margin-top: 22px;;
+
 }
     
 .login-form-container form h2{
-    font-size: 1.3rem;
-    color:#000;
-    font-weight: 300;
+    font-size: 15px;
+    color: var(--gray-color);
+    font-weight: 400;
     text-align: center;
-    padding:1rem 0; 
+    margin-top: 10px;
 }
 .login-form-container form a{
-    font-size: 1.3rem;
+    font-size: 15px;
     font-weight: 300;
     text-align: center;
     padding:1rem 0; 
     color: red;
 }
 .login-form-container form h2 a{
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     text-align: center;
     padding:1rem 0; 
     text-decoration: none;
-    color:rgb(40, 26, 161);
+    color:#2441e7;
+    margin-bottom: 10px;;
 }
-
   
 .login-form-container form .box{
-    width:100%;
-    padding:1rem;
-    font-size: 1.7rem;
-    color:#333;
-    margin:.6rem 0;
-    border:.1rem solid rgba(0,0,0,.3);
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+    padding: 10px;
+    margin: 0.6rem 0;
+    border: 0.1rem solid rgba(0,0,0,.3);
+    border-radius: 5px;
     text-transform: none;
 }
-  
+ 
 .login-form-container form .box:focus{
     border-color: var(--orange);;
 }
@@ -207,7 +218,9 @@ section{
 }
   
 .login-form-container form label{
-    font-size: 1.5rem;
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 15px;
 }
   
 .login-form-container form .btn{
@@ -239,10 +252,19 @@ section{
 }
 /* End login form container */
 /* Course section */
+.img-item .img-course{
+    width: 100%;
+}
 .course-item{
     border-style: solid;
     border-width: 1px;
+    border-color: var(--gray-color);
     width: 300px;
+    height: 380px;
+}
+.course-item:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px #888888;
 }
 .course__section .content{
     text-align: center;
@@ -256,6 +278,12 @@ section{
 .course__section .content p{
     font-size: 15px;
     text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+    color: #6f7074;
+}
+.course-item .detail-item{
+    margin: 15px 20px;
+    height: auto;
+    min-height: 120px;
 }
 .course-item .detail-item p{
     font-size: 15px;
@@ -271,9 +299,99 @@ section{
 .course-item .detail-item h3{
     font-size: 1rem;
 }
-.img-item .img-course{
-    width: 170px;
-    object-fit: cover;
+.footer-item{
+    font-weight: 300;
+    margin: 15px 15px;    
+    color: var(--gray-color);
     
 }
+.footer-item span{
+    margin: 0 5px;
+}
 /* End course section */
+/* Review section */
+
+.review .review-slider{
+    padding-bottom: 2rem;
+}
+  
+.review .box{
+    padding:2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    height: 400px;
+}
+  
+.review .box img{
+    height:120px;
+    width:120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+  
+.review .box h3{
+    color:#333;
+    font-size: 2.5rem;
+}
+  
+.review .box p{
+    color:#666;
+    font-size: 15px;
+    padding:1rem 0;
+}
+  
+.review .header__review{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header__review .header__review-right{
+    font-size: 50px;
+    margin-top: -22px;
+    position: relative;
+}
+.header__review .header__review-right i{
+    position: absolute;
+    margin: -36px 0 0 -36px;
+}
+.review .header__review .header__review-left{
+    display: flex;
+    flex-direction: row;
+}
+.review .header__review .header__review-right{
+    margin-top: 30px;
+}
+.review .header__review .header__review-right h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.review .header__review .header__review-right h4{
+    font-size: 15px;
+    font-weight: 500;
+    color:#2441e7;
+    margin-left: 26px;
+}
+/* End review section */
+.footer--background{
+    background-color: var(--footer-color);
+}
+.text--right{
+    text-align: right!important;
+}
+
+.text__footer p{
+    color:#fff;
+}
+.text__footer-left{
+    font-size: 25px;
+    margin-left: -100px;
+    font-weight: 700;
+
+}
+.copyright--background{
+    background-color: var(--copyright-color);
+    color:#fff; 
+    font-size: 13px;
+}
