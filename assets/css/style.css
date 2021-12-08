@@ -2,7 +2,6 @@
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
-    text-transform: capitalize;
     outline: none; border:none;
     text-decoration: none;
     transition: all .2s linear;
@@ -152,51 +151,54 @@ section{
     padding:1.5rem 2rem;
     border-radius: .5rem;
     background:#fff;
-    width: 45rem;
+    width: 31rem;
+    height: 27rem;
 }
   
 .login-form-container form h3{
-    font-size: 2rem;
+    font-size: 25px;
     color:#000;
     font-weight: 700;
     text-align: center;
-    padding:1rem 0;
+    margin-top: 22px;;
+
 }
     
 .login-form-container form h2{
-    font-size: 1.3rem;
-    color:#000;
-    font-weight: 300;
+    font-size: 15px;
+    color:#6f7074;
+    font-weight: 400;
     text-align: center;
-    padding:1rem 0; 
+    margin-top: 10px;
 }
 .login-form-container form a{
-    font-size: 1.3rem;
+    font-size: 15px;
     font-weight: 300;
     text-align: center;
     padding:1rem 0; 
     color: red;
 }
 .login-form-container form h2 a{
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     text-align: center;
     padding:1rem 0; 
     text-decoration: none;
-    color:rgb(40, 26, 161);
+    color:#2441e7;
+    margin-bottom: 10px;;
 }
-
   
 .login-form-container form .box{
-    width:100%;
-    padding:1rem;
-    font-size: 1.7rem;
-    color:#333;
-    margin:.6rem 0;
-    border:.1rem solid rgba(0,0,0,.3);
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+    padding: 10px;
+    margin: 0.6rem 0;
+    border: 0.1rem solid rgba(0,0,0,.3);
+    border-radius: 5px;
     text-transform: none;
 }
-  
+ 
 .login-form-container form .box:focus{
     border-color: var(--orange);;
 }
@@ -207,7 +209,9 @@ section{
 }
   
 .login-form-container form label{
-    font-size: 1.5rem;
+    color:#6f7074;
+    font-weight: 400;
+    font-size: 15px;
 }
   
 .login-form-container form .btn{
