@@ -70,6 +70,16 @@ section{
 .navbar-collapse{
     margin: 22px 0 0 30px;
 }
+/* Login section */
+.visible{
+    display:none;
+}
+.initial{
+    display: initial!important;
+}
+#logout-area{
+    display:none;
+}
 .login-form{
     color: #fff;
     text-decoration: none;
@@ -99,6 +109,7 @@ section{
 .login-form:hover{
     color:black;
 }
+/* End login  */
 /* End header section */
 /* Section video */
 .video__banner{
@@ -308,6 +319,35 @@ section{
 .footer-item span{
     margin: 0 5px;
 }
+/* pagitination */
+.pagination {
+    float: right;
+}
+.pagination ul{
+    height: 50px;
+    padding: 0 5px;
+    width: auto;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pagination ul li{
+    list-style: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+.pagination .prev,
+.pagination .next{
+    background-color: blue;
+}
+.pagination li a{
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+/* end pagitination */
 /* End course section */
 /* Review section */
 
@@ -394,4 +434,20 @@ section{
     background-color: var(--copyright-color);
     color:#fff; 
     font-size: 13px;
+}
+
+
+/* Signup html */
+/* Content section */
+.content__sub{
+    display: flex;
+    flex-direction: row;
+    
+}
+.content__sub a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
 }

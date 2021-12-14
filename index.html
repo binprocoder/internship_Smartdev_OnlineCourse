@@ -22,12 +22,14 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-            
+
 
 <body>
-    
+
     <!-- Section header -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark header__navbar">
@@ -60,11 +62,17 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item login-form">
+                        <li class="nav-item login-form" id="login-area">
                             <span style="color: #fff;">
                                 <i class="far fa-user"></i>
                             </span>
                             <a href="" id="login-btn">Login/Register</a>
+                        </li>
+                        <li class="nav-item login-form" id="logout-area">
+                            <span style="color: #fff;">
+                                <i class="far fa-user"></i>
+                            </span>
+                            <a href="" id="login-btn">Logout</a>
                         </li>
                         <li class="nav-item login-form">
                             <a href="" class="search-button">
@@ -78,6 +86,7 @@
             </div>
         </nav>
     </header>
+    <!-- End header -->
     <!-- Section banner -->
     <section class="video__banner" id="video__banner">
         <div class="content">
@@ -93,15 +102,15 @@
     <!-- Login form container-->
     <div class="login-form-container">
         <i class="fas fa-times" id="form-close"></i>
-        <form action="">
+        <form action="" id="form-login">
             <h3>Login to your account</h3>
-            <h2>Don't have an account?<a href="#"> Sign up!</a></h2>
-            <input type="email" class="box" placeholder="Username" id="username">
-            <input type="password" class="box" placeholder="Password" id="password">
+            <h2>Don't have an account?<a href="./signup.html"> Sign up!</a></h2>
+            <input type="email" class="box" placeholder="email" id="username" required>
+            <input type="password" class="box" placeholder="Password" id="password" name="password" required>
             <input type="checkbox" id="remember">
             <label for="remember">Nhớ tên tài khoản</label>
             <a href="#">Quên mật khẩu</a>
-            <button type="submit" onclick="loginFunction()" class="btn btn-login">Đăng nhập</button>
+            <button type="submit" class="btn btn-login">Đăng nhập</button>
         </form>
     </div>
     <!-- End login form -->
@@ -113,13 +122,22 @@
                 <h3>Khóa học lập trình cơ bản</h3>
                 <p>Khóa học dành cho người mới bắt đầu học lập trình. Chưa có kiến thức về nền tảng lập trình</p>
             </div>
-            <div class="row" id = "list-courses">
-               
+            <div class="row" id="list-courses">
+
             </div>
         </div>
-
     </section>
-
+    <section class="pagination__section">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </section>
 
     <!-- End course -->
 
@@ -334,7 +352,7 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
-    
+
 
 </body>
 
