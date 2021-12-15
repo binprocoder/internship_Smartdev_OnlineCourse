@@ -271,7 +271,7 @@ section{
     border-width: 1px;
     border-color: var(--gray-color);
     width: 300px;
-    height: 380px;
+    height: 404px;
 }
 .course-item:hover{
     cursor: pointer;
@@ -294,7 +294,7 @@ section{
 .course-item .detail-item{
     margin: 15px 20px;
     height: auto;
-    min-height: 120px;
+    min-height: 132px;
 }
 .course-item .detail-item p{
     font-size: 15px;
@@ -319,11 +319,14 @@ section{
 .footer-item span{
     margin: 0 5px;
 }
+.footer-item p{
+    color: red;
+}
 /* pagitination */
-.pagination {
+#pagination {
     float: right;
 }
-.pagination ul{
+#pagination ul{
     height: 50px;
     padding: 0 5px;
     width: auto;
@@ -332,15 +335,15 @@ section{
     justify-content: space-around;
     align-items: center;
 }
-.pagination ul li{
+#pagination ul li{
     list-style: none;
     padding: 5px 10px;
     font-weight: bold;
     border: 1px solid #ccc;
 }
-.pagination .prev,
-.pagination .next{
-    background-color: blue;
+.paginationjs-prev,
+.paginationjs-next{
+    background-color: rgb(58, 201, 106);
 }
 .pagination li a{
     background-color: transparent;
