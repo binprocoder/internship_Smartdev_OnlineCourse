@@ -46,6 +46,7 @@ section{
     display: inline-block;
     font-size: 16px;
 }
+
 .btn-login{
     background-color: #192675;
 }
@@ -341,6 +342,9 @@ section{
     font-weight: bold;
     border: 1px solid #ccc;
 }
+#pagination ul a{
+    text-decoration: none;
+}
 .paginationjs-prev,
 .paginationjs-next{
     background-color: rgb(58, 201, 106);
@@ -440,17 +444,3 @@ section{
 }
 
 
-/* Signup html */
-/* Content section */
-.content__sub{
-    display: flex;
-    flex-direction: row;
-    
-}
-.content__sub a{
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-}

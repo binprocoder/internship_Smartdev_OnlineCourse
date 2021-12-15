@@ -75,6 +75,7 @@ const handleLogin = (users) => {
     localStorage.setItem('userCurrent', JSON.stringify(user));
     renderLogin();
     alert('Login successful');
+    location.href = "./index.html";
   }
   else
     alert('Wrong password or email');
