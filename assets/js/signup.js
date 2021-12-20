@@ -28,6 +28,7 @@ formSignUp.addEventListener('submit', async (e)=>{
           return res.json(); // JSON data parsed by `data.json()` call
         })
         .then(data => console.log(data))
+        .catch(err => alert("có lỗi trong quá trình đăng ký"))
     // Reload page after post successful
     location.reload();
     alert("Chúc mừng bạn đã đăng ký thành công");
