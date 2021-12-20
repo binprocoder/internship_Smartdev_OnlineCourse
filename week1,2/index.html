@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Academy</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+
+<body>
+
+    <!-- Section header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark header__navbar">
+
+            <div class="container-fluid pd-2">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logolecademy.png" alt="" width="50">
+                    <span class="font-Nunito font--Bold">LE ACADEMY</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="font-Nunito font--Light">VIETNAMESE (VI)</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">ENGLISH (en)</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"> VIETNAMESE (vi) </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item login-form" id="login-area">
+                            <span style="color: #fff;">
+                                <i class="far fa-user"></i>
+                            </span>
+                            <a href="" id="login-btn">Login/Register</a>
+                        </li>
+                        <li class="nav-item login-form" id="logout-area">
+                            <span style="color: #fff;">
+                                <i class="far fa-user"></i>
+                            </span>
+                            <a href="">Logout</a>
+                        </li>
+                        <li class="nav-item login-form">
+                            <a href="" class="search-button">
+                                <span style="color: #fff;">
+                                    <i class="fas fa-search "></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <!-- Section banner -->
+    <section class="video__banner" id="video__banner">
+        <div class="content">
+            <h3>Học lập trình miễn phí</h3>
+            <p>Dành cho các bạn muốn theo đuổi ngành công nghệ thông tin</p>
+            <button type="button" class="btn">Ready to get started?</button>
+        </div>
+        <div class="video-container">
+            <video src="assets/images/vid_banner.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+    </section>
+    <!-- End banner -->
+    <!-- Login form container-->
+    <div class="login-form-container">
+        <i class="fas fa-times" id="form-close"></i>
+        <form action="" id="form-login">
+            <h3>Login to your account</h3>
+            <h2>Don't have an account?<a href="./signup.html"> Sign up!</a></h2>
+            <input type="email" class="box" placeholder="email" id="email" required>
+            <input type="password" class="box" placeholder="Password" id="password" name="password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                title="Phải có 1 kí tự số và có chữ hoa và thường, lớn hơn 6 ký tự" required>
+            <input type="checkbox" id="remember">
+            <label for="remember">Nhớ tên tài khoản</label>
+            <a href="#">Quên mật khẩu</a>
+            <button type="submit" class="btn btn-login">Đăng nhập</button>
+        </form>
+    </div>
+    <!-- End login form -->
+
+    <!-- Section course -->
+    <section class="course__section">
+        <div class="container">
+            <div class="content">
+                <h3>Khóa học lập trình cơ bản</h3>
+                <p>Khóa học dành cho người mới bắt đầu học lập trình. Chưa có kiến thức về nền tảng lập trình</p>
+            </div>
+            <div class="row" id="list-courses">
+
+            </div>
+            <div id="pagination">
+
+            </div>
+        </div>
+    </section>
+    <!-- <section class="pagination__section">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" id = "pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </section> -->
+
+    <!-- End course -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper" id="review-list">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- Footer section -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start footer--background text-muted">
+
+        <!-- Section: Links  -->
+        <section class="border-bottom">
+            <div class="container text-center text-md-start mt-5 " style="color: #fff;">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="fw-bold mb-4">
+                            Giới thiệu Le Academy
+                        </h6>
+                        <p>
+                            Cộng đồng lập trình Agile Developer ra đời nhằm mang lại giá trị học tập cho sinh viên, lập
+                            trình viên. Với những khóa học từ cơ bản đến nâng cao sẽ giúp các bạn tiếp thu nhanh chóng
+                            công nghệ mới nhằm đáp ứng thị trường.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="fw-bold mb-4">
+                            Company
+                        </h6>
+                        <p>Le Academy</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="fw-bold mb-4">
+                            Programs
+                        </h6>
+                        <p>
+                            Từ cơ bản đến nâng cao cho người học lập trình
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="fw-bold mb-4">
+                            Support
+                        </h6>
+                        <p>
+                            Được hỗ trợ từ các lập trình viên từ 5 đến 10 năm kinh nghiệm
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="fw-bold mb-4">
+                            Liên hệ
+                        </h6>
+                        <p>Cộng đồng Agile Developer Đà Nẵng</p>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Section: Social media -->
+        <section class="row justify-content-center justify-content-lg-between p-4 text__footer">
+            <div class="col-xl-4 text-center">
+                <img src="./assets/images/logolecademy.png" alt="" width="300px">
+                <p class="text-uppercase text__footer-left">Le Academy</p>
+            </div>
+
+            <div class="col-xl-4 text-center">
+                <p>Nâng tầm tri thức - Vứng bước tương lai</p>
+            </div>
+
+            <div class="col-xl-4 text--right mb-text--center" style="color: #fff;">
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 copyright--background">
+            Copyright © 2020 Le Academy. All Rights Reserved
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- End footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>
