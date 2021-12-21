@@ -170,7 +170,7 @@ const totalPrice = (courses) => {
 // Những function sẽ chạy khi trang web chạy
 const start = () => {
   getCourses((courses) => {
-    renderCourse(courses);
+    // renderCourse(courses);
     let courseItem = document.getElementsByClassName("course-item");
     console.log(courseItem.length);
     totalPrice(courses);
