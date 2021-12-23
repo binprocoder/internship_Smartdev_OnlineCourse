@@ -1,5 +1,7 @@
 const axios = require('axios');
 const courseApi = 'https://61a0652fa647020017613372.mockapi.io/api/courses';
+const Course = require('../models/Course')
+const Review = require('../models/Review')
 class helloController {
     index(req,res,next){
         res.send('Hello trang hello');
@@ -15,8 +17,10 @@ class helloController {
             const res = await axios.get(courseApi);
             return res.data;
         }
-        const courses = await getCourse();
-        res.render('ejstest',{course: courses});
+        // const courses = await getCourse();
+        // const courses = Course
+        res.render('ejstest',{courses: Course, reviews: Review});
+
         // return res.status(200).json(courses);
     }
 }

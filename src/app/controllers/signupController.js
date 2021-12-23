@@ -1,3 +1,5 @@
+const User = require('../models/User')
+
 class signupController {
     // Get
     index(req,res,next) {
@@ -6,8 +8,13 @@ class signupController {
         
     }
     // Post
-    signup(req,res,next){
-        res.json(req.body);
+    register(req,res,next){
+        // res.json(req.body);
+        User.push({
+            username: req.body.username,
+            password: req.body.password
+        })
+        res.redirect('/');
     }
 }
 module.exports = new signupController;

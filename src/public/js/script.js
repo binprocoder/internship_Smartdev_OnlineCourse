@@ -176,9 +176,9 @@ const start = () => {
     totalPrice(courses);
     handlePagination(courses);
   });
-  getReviews((reviews) => {
-    renderReviews(reviews);
-  })
+  // getReviews((reviews) => {
+  //   renderReviews(reviews);
+  // })
 }
 start();
 

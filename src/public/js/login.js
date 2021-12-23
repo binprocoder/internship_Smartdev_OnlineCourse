@@ -30,62 +30,62 @@ const getUsers = async () => {
     .then(data => console.log(data));
 }
 getUsers();
-// // Get element from input
-// const handleForm = (e) => {
-//   e.preventDefault();
-//   getUsers((users) => {
-//     handleLogin(users);
-//   });
-// }
-// form.addEventListener('submit', handleForm);
+// Get element from input
+const handleForm = (e) => {
+  e.preventDefault();
+  getUsers((users) => {
+    handleLogin(users);
+  });
+}
+form.addEventListener('submit', handleForm);
 
-// // renderLogin
-// const renderLogin = () => {
-//   const userCurrent = JSON.parse(localStorage.getItem('userCurrent'));
+// renderLogin
+const renderLogin = () => {
+  const userCurrent = JSON.parse(localStorage.getItem('userCurrent'));
 
-//   const logout = {
-//     email: null,
-//     password: null
-//   }
-//   if (userCurrent.email == null && userCurrent.password == null) {
-//     logoutArea.style.display = 'none';
-//     loginArea.style.display = 'initial';
-//   }
-//   else {
-//     loginForm.classList.remove('active');
-//     loginArea.style.display = "none";
-//     logoutArea.style.display = "initial";
-//   }
-//   logoutArea.onclick = () => {
-//     localStorage.setItem('userCurrent', JSON.stringify(logout));
-//   };
-// }
-// // Login authentication
-// const handleLogin = (users) => {
-//   var email = document.getElementById('email').value;
-//   var password = document.getElementById('password').value;
-//   let isUser = false;
-//   for (let i = 0; i < users.length; i++) {
-//     if (email == users[i].username && password == users[i].password) {
-//       isUser = true;
-//       break;
-//     }
-//     else
-//       isUser = false;
-//   }
-//   console.log(isUser);
-//   if (isUser) {
-//     var user = {
-//       email,
-//       password,
-//     }
-//     localStorage.setItem('userCurrent', JSON.stringify(user));
-//     renderLogin();
-//     alert('Login successful');
-//     location.href = "./index.html";
-//   }
-//   else
-//     alert('Wrong password or email');
+  const logout = {
+    email: null,
+    password: null
+  }
+  if (userCurrent.email == null && userCurrent.password == null) {
+    logoutArea.style.display = 'none';
+    loginArea.style.display = 'initial';
+  }
+  else {
+    loginForm.classList.remove('active');
+    loginArea.style.display = "none";
+    logoutArea.style.display = "initial";
+  }
+  logoutArea.onclick = () => {
+    localStorage.setItem('userCurrent', JSON.stringify(logout));
+  };
+}
+// Login authentication
+const handleLogin = (users) => {
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  let isUser = false;
+  for (let i = 0; i < users.length; i++) {
+    if (email == users[i].username && password == users[i].password) {
+      isUser = true;
+      break;
+    }
+    else
+      isUser = false;
+  }
+  console.log(isUser);
+  if (isUser) {
+    var user = {
+      email,
+      password,
+    }
+    localStorage.setItem('userCurrent', JSON.stringify(user));
+    renderLogin();
+    alert('Login successful');
+    location.href = "./index.html";
+  }
+  else
+    alert('Wrong password or email');
 
-// }
-// renderLogin();
+}
+renderLogin();

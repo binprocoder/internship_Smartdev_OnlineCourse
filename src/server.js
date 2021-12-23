@@ -1,4 +1,5 @@
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 3000;//default port
 const route = require('./routes/index');
@@ -13,6 +14,9 @@ app.use(express.urlencoded({
 // Xử lý từ code js
 app.use(express.json());
 // EJS view
+app.use(expressLayouts);
+// Thay đổi đường dẫn layout.ejs
+app.set('layout', './layouts/layout')
 app.set('view engine', 'ejs');
 // Tim hieu app.set views
 app.set('views', path.join(__dirname, './app/views'));
