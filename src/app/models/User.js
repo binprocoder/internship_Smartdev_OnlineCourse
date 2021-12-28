@@ -1,14 +1,9 @@
-let users = 
-[
-  {
-    "username": "bin@gmail.com",
-    "password": "Trandaiquy123",
-    "id": "1"
-  },
-  {
-    "username": "bin1@gmail.com",
-    "password": "Trandaiquy123",
-    "id": "2"
-  }
-]
-module.exports = users;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const User = new Schema({
+  username: { type: String, required: true },
+  password: { type: String, required: true},
+});
+
+module.exports = mongoose.model('User', User);

@@ -7,7 +7,9 @@ class helloController {
         res.send('Hello trang hello');
     }
     ren(req,res,next){
-        res.render('hello');
+        Course.find({})
+            .then(courses => res.json(courses))
+            .catch(next)
     }
     async ejs(req,res,next){
         // res.render('ejstest',{hoten: 'Bin Tran'});

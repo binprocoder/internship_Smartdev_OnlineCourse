@@ -1,0 +1,35 @@
+<!-- Section banner -->
+<link rel="stylesheet" href="css/signup.css">
+
+<section class="video__banner" id="video__banner">
+    <div class="content">
+        <h3>Le Academy</h3>
+        <div class="content__sub">
+            <a href="/">Trang chủ</a>
+            <p>Đăng nhập</p>
+            <p>Tài khoản mới</p>
+        </div>
+    </div>
+</section>
+<!-- End banner -->
+<!-- Form signup section -->
+
+<section class="signUp__section">
+    <div class="container">
+        <h3>Đăng nhập</h3>
+        <form id="signupForm" method = "Post" action='/login'>
+            <div class="form-group mt-2">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email" name="username" required>
+            </div>
+            <div class="form-group mt-2">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                    title="Phải có 1 kí tự số và có chữ hoa và thường, lớn hơn 6 ký tự" required>
+            </div>
+            <button type="submit" class="btn btn-signUp mt-3">Login</button>
+        </form>
+    </div>
+</section>

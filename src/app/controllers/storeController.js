@@ -1,20 +1,18 @@
-const axios = require('axios');
-const courseApi = 'https://61a0652fa647020017613372.mockapi.io/api/courses';
 const Course = require('../models/Course')
 const User = require('../models/User')
 const Review = require('../models/Review')
 class helloController {
-    index(req,res,next){
-        return res.status(200).json({Course, User, Review})
-    }
     course(req,res,next){
-        return res.status(200).json({Course})
+        Course.find({})
+            .then((courses) => res.json(courses))
     }
     user(req,res,next){
-        return res.status(200).json({User})
+        User.find({})
+            .then((users) => res.json(users))
     }
     review(req,res,next){
-        return res.status(200).json({Review})
+        Review.find({})
+            .then((reviews) => res.json(reviews))
     }
 }
 module.exports = new helloController;

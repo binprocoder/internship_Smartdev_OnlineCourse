@@ -1,10 +1,17 @@
+require('dotenv').config();
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 3000;//default port
 const route = require('./routes/index');
 const path = require('path');
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json());
+// Config database
+const db = require('./config/database/database');
+// Connect to db
+db.connect();
 // static file 
 app.use(express.static(path.join(__dirname, 'public')));
 // Middleware xử lý dữ liệu từ form 
