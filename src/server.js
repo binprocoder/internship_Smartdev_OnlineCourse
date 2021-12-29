@@ -6,7 +6,7 @@ const port = 3000;//default port
 const route = require('./routes/index');
 const path = require('path');
 const bodyParser = require('body-parser');
-
+const methodOverride = require('method-override');
 app.use(bodyParser.json());
 // Config database
 const db = require('./config/database/database');
@@ -14,6 +14,9 @@ const db = require('./config/database/database');
 db.connect();
 // static file 
 app.use(express.static(path.join(__dirname, 'public')));
+// Override form default Post in edit.ejs
+app.use(methodOverride('_method'))
+
 // Middleware xử lý dữ liệu từ form 
 app.use(express.urlencoded({
     extended: true,

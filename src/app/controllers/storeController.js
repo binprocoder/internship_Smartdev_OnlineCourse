@@ -14,5 +14,23 @@ class helloController {
         Review.find({})
             .then((reviews) => res.json(reviews))
     }
+    // [Post] /admin/course/store
+    create(req, res, next) {
+        const formData = req.body;
+        const course = new Course(formData);
+        course.save()
+            .then(() => res.redirect('/admin/stored/courses'))
+            .catch(error => {
+                res.json(error);;
+            })
+    }
+    // {Put} /admin/course/:id
+    update(req,res,next) {
+        Course.updateOne({ _id: req.params.id}, req.body)
+            .then(() => {
+                res.redirect('/admin/stored/courses')
+            })
+            .catch(next);
+    }
 }
 module.exports = new helloController;

@@ -27,7 +27,7 @@ class siteController {
                 // res.render('index',{token})
                 // res.json(token);
                 res.cookie('access-token', `Bearer ${token}`,{ 
-                    maxAge: 10800000
+                    maxAge: 30*60*1000
                 })
                 res.redirect('/')
             }
@@ -36,7 +36,7 @@ class siteController {
             }
         })
         .catch(err => {
-            res.json({err: err.message});
+            res.send('Bạn nhập thông tin tài khoản chưa đúng')
         })
 
     }

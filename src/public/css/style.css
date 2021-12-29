@@ -272,7 +272,7 @@ section{
     border-width: 1px;
     border-color: var(--gray-color);
     width: 300px;
-    height: 404px;
+    height: 95%;
 }
 .course-item:hover{
     cursor: pointer;
@@ -315,7 +315,7 @@ section{
     font-weight: 300;
     margin: 15px 15px;    
     color: var(--gray-color);
-    
+    max-height: 100px;   
 }
 .footer-item span{
     margin: 0 5px;

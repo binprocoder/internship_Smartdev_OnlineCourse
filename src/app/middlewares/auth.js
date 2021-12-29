@@ -19,9 +19,7 @@ module.exports = {
             })
         }
         else {
-            return res.status(400).send({ 
-                message: 'Bạn chưa được xác thực, cần phải đăng nhập'
-            })
+            res.redirect('/login');
         }
     }
 }

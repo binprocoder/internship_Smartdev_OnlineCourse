@@ -1,3 +1,4 @@
+<% var i = 0%>
 <div class="mt-4">
     <div>
         <h3>Khoa hoc cua toi</h3>
@@ -15,13 +16,13 @@
             <% courses.forEach((course)=>{%>
 
             <tr>
-                <th scope="row"></th>
+                <th scope="row"><%- ++i%></th>
                 <td><%- course.name %></td>
                 <td><%- course.date%></td>
                 <td><%- course.description %></td>
                 <td>
-                    <a href="/courses/{{this._id}}/edit" class="btn btn-link">Sữa</a>
-                    <a href="" class="btn btn-link" data-toggle="modal" data-id="{{this._id}}"
+                    <a href="/admin/course/<%- course.id %>/edit" class="btn btn-link">Sữa</a>
+                    <a href="" class="btn btn-link" data-toggle="modal" data-id="<%- course.id%>"
                         data-target="#delete-course-modal">Xóa</a>
                 </td>
             </tr>

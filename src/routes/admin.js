@@ -3,7 +3,7 @@ const router = express.Router();
 const adminController = require('../app/controllers/adminController');
 router.get('/stored/courses',adminController.store);
 router.get('/course/create',adminController.create);
-router.post('course/store',adminController.storeCourse);
+router.get('/course/:id/edit',adminController.edit);
 router.use('/course',adminController.course);
 router.use('/review',adminController.review);
 router.use('/user',adminController.user);

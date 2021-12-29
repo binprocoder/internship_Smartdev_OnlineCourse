@@ -1,0 +1,22 @@
+<div class="mt-4">
+    <h3>Cập nhật khóa học</h3>
+    <form class = "mt-4" method = "POST" action="/store/course/<%- course.id%>?_method=PUT">
+        <div class="form-group">
+            <label for="name">Tên khóa học</label>
+            <input type="text" class="form-control" value = "<%- course.name%>" id="name" name = "name">
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tả khóa học</label>
+            <textarea  class="form-control"  id="description" name = "description"><%- course.description%></textarea>
+        </div>
+        <div class="form-group">
+            <label for="videoId">Giá khóa học</label>
+            <input type="text" class="form-control" id="price" name = "price" value = "<%- course.price%>">
+        </div>
+        <div class="form-group">
+            <label for="videoId">Thumbnail khóa học</label>
+            <input type="text" class="form-control" id="anh" name = "anh" value = "<%- course.anh%>">
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+    </form>
+</div>

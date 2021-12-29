@@ -41,5 +41,14 @@ class adminController {
                 res.json(error);;
             })
     }
+    // [Get] /admin/course/:id/edit
+    edit(req,res,next) {
+        Course.findById(req.params.id)
+            .then(course => res.render('courses/edit', {course}))
+            .catch(next);
+    }
+
+    
+
 }
 module.exports = new adminController;
